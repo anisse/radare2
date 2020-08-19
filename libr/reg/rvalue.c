@@ -128,7 +128,7 @@ R_API ut64 r_reg_get_value(RReg *reg, RRegItem *item) {
 		// XXX 128 bit
 		return (ut64)r_reg_get_longdouble (reg, item);
 	default:
-		eprintf ("r_reg_get_value: Bit size %d not supported\n", item->size);
+		eprintf ("r_reg_get_value: Bit size %d not supported for reg %s\n", item->size, item->name);
 		break;
 	}
 	return 0LL;
